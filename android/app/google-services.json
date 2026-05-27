@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "166715872000",
+    "project_id": "superb-3caec",
+    "storage_bucket": "superb-3caec.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:166715872000:android:20eb86827f33becfdf19e5",
+        "android_client_info": {
+          "package_name": "com.example.superb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsawAGRfGej_KHemZOXlmrkx9fKBXGwmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
