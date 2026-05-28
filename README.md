@@ -1,17 +1,30 @@
-# superb
+# social-auth-template
 
-A new Flutter project.
+This repository provides a comprehensive, ready-to-use frontend architecture specifically designed to facilitate seamless Google and GitHub OAuth2 social authentication for Flutter mobile applications. Built on top of Flutter, this template securely communicates with the Django REST Framework backend to handle OAuth token verification, automate user registration/profile creation, and manage secure session authentication using `shared_preferences`. It eliminates the boilerplate code usually required to establish a secure communication bridge between Flutter's frontend social sign-in flows and a Django-based backend ecosystem, making it an ideal starting point for secure, scalable mobile applications.
 
-## Getting Started
+Open Source Backend Part: The server-side logic and API configurations for this project are hosted in a separate repository. You can find it here: [social-auth-backend](https://github.com/Yusupov-Muhammadyusuf/social-auth-backend)
 
-This project is a starting point for a Flutter application.
+## Security Note
+**WARNING:** Never push your actual `serverClientId` or GitHub `clientId` keys written directly inside the code to GitHub, GitLab, or any other open-source platforms. This can expose your application to authentication spoofing. Always clear these fields and leave them as placeholders before making your repository public.
 
-A few resources to get you started if this is your first Flutter project:
+## Configuration
+To run this project successfully, other developers must configure the social authentication client keys inside the `AuthService` class located in the frontend files:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+### 1. Google and GitHub Auth Settings
+Open `lib/services/auth_service.dart` and replace the following placeholder variables with your own credentials:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Google OAuth2: Enter the Web Application Client ID obtained from the Google Cloud Console into the `serverClientId` field.
+* GitHub OAuth2: Enter the Client ID obtained from the GitHub Developer Settings into the `clientId` constant.
+
+```dart
+class AuthService {
+  final GoogleSignIn _googleSignIn = GoogleSignIn(
+    serverClientId: "YOUR_CLIENT_ID_FOR_WEB_APPLICATION",
+  );
+
+  Future<void> signInWithGitHub(BuildContext context) async {
+    const String clientId = "YOUR_CLIENT_ID";
+    const String redirectUrl = "superb://callback"; 
+    // ...
+  }
+}
