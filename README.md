@@ -28,3 +28,17 @@ class AuthService {
     // ...
   }
 }
+```
+
+# How to Run the Frontend (recommended part)
+Ensuring a clean package cache and verifying your Flutter environment is highly recommended to prevent dependency conflicts and ensure a smooth installation:
+
+```bash
+git clone [https://github.com/Yusupov-Muhammadyusuf/social-auth-template.git](https://github.com/Yusupov-Muhammadyusuf/social-auth-template.git)
+cd social-auth-template
+
+flutter pub cache clean
+flutter pub get
+flutter doctor
+flutter run
+```
