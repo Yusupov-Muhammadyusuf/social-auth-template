@@ -10,7 +10,7 @@ import 'package:superb/registration/password_dialog.dart';
 class AuthService {
   final GoogleSignIn _googleSignIn = GoogleSignIn(
     serverClientId:
-        "32499129280-sle6p3i6tcmtioa7u083u9msba5uhbs1.apps.googleusercontent.com",
+        "YOUR_CLIENT_ID_FOR_WEB_APPLICATION",
   );
 
   Future<void> signInWithGoogle(BuildContext context) async {
@@ -61,7 +61,7 @@ class AuthService {
   }
 
   Future<void> signInWithGitHub(BuildContext context) async {
-    const String clientId = "Ov23liTuDJy270qAqXbB";
+    const String clientId = "YOUR_CLIENT_ID";
     const String redirectUrl = "superb://callback";
 
     try {
